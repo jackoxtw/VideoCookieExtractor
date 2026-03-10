@@ -26,7 +26,14 @@
 - **HBO Max / Max** (hbomax.com, max.com)
 - **Amazon Prime Video** (primevideo.com)
 
-### 📖 使用指南
+### � 如何安裝 (How to Install)
+1. 下載此專案程式碼並解壓縮（或使用 `git clone`）。
+2. 在 Chrome 瀏覽器網元列輸入 `chrome://extensions/` 並按 Enter。
+3. 開啟右上角的「**開發者模式**」(Developer mode)。
+4. 點擊左上角的「**載入解壓縮擴充功能**」(Load unpacked)。
+5. 選擇本專案的主資料夾（包含 `manifest.json` 的資料夾）即可完成安裝。
+
+### �📖 使用指南
 #### 1. 儲存與切換分身
 - 在串流平台登入後，點擊擴充功能圖示。
 - 在「新分身名稱」輸入識別文字後點擊「儲存」。
@@ -69,6 +76,13 @@ A powerful Chrome extension designed to help users manage multiple streaming acc
 - **Netflix** (netflix.com)
 - **HBO Max / Max** (hbomax.com, max.com)
 - **Amazon Prime Video** (primevideo.com)
+
+### 📦 Installation
+1. Download the source code and extract it (or use `git clone`).
+2. Type `chrome://extensions/` in your Chrome address bar and press Enter.
+3. Enable "**Developer mode**" using the toggle in the top-right corner.
+4. Click "**Load unpacked**" in the top-left corner.
+5. Select the project's root folder (the one containing `manifest.json`) to install.
 
 ### 📖 Usage Guide
 #### 1. Saving & Switching Profiles
