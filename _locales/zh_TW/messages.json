@@ -1,0 +1,280 @@
+{
+    "langName": {
+        "message": "繁體中文"
+    },
+    "uiLanguage": {
+        "message": "介面語言"
+    },
+    "autoLanguage": {
+        "message": "自動 (跟隨系統)"
+    },
+    "extensionName": {
+        "message": "串流平台 Session 管理器"
+    },
+    "extensionDescription": {
+        "message": "匯出/匯入 Disney+, Netflix, HBO, Prime Video 的 Cookies 與 Session，支援多帳號管理"
+    },
+    "actionTitle": {
+        "message": "Get Cookies"
+    },
+    "goToPrefix": {
+        "message": "按此前往："
+    },
+    "openManagePage": {
+        "message": "⚙️ 開啟帳號管理分頁"
+    },
+    "initializing": {
+        "message": "初始化中..."
+    },
+    "selectAtLeastOne": {
+        "message": "⚠️ 請至少選擇一個平台"
+    },
+    "detectedCookies": {
+        "message": "✅ 已偵測到 $count$ 個 Cookies ($platformCount$ 平台)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "platformCount": {
+                "content": "$2"
+            }
+        }
+    },
+    "noCookiesDetected": {
+        "message": "❌ 勾選平台未偵測到 Cookies"
+    },
+    "statusUnknown": {
+        "message": "❓ 狀態未知"
+    },
+    "platformAndProfileSwitch": {
+        "message": "平台 & 分身快速切換"
+    },
+    "loadingProfiles": {
+        "message": "載入分身..."
+    },
+    "selectAll": {
+        "message": "全選"
+    },
+    "selectNone": {
+        "message": "清空"
+    },
+    "newProfilePlaceholder": {
+        "message": "新分身名稱 (如: 帳號A)"
+    },
+    "save": {
+        "message": "儲存"
+    },
+    "exportOperations": {
+        "message": "匯出操作"
+    },
+    "copyToClipboard": {
+        "message": "📋 複製 Session 到剪貼簿"
+    },
+    "showContent": {
+        "message": "顯示內容"
+    },
+    "exportFile": {
+        "message": "匯出檔案"
+    },
+    "importSession": {
+        "message": "匯入 Session"
+    },
+    "importPlaceholder": {
+        "message": "在此處貼上 JSON 內容..."
+    },
+    "startImport": {
+        "message": "📥 開始匯入"
+    },
+    "enterProfileName": {
+        "message": "請輸入分身名稱"
+    },
+    "saveOnPlatformPage": {
+        "message": "請在串流平台頁面儲存分身"
+    },
+    "profileSaved": {
+        "message": "已儲存分身: $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "profileNotFound": {
+        "message": "找不到分身資料"
+    },
+    "unsupportedPlatform": {
+        "message": "不支援的平台"
+    },
+    "switchedTo": {
+        "message": "已切換至: $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "goToPlatformPageToLoad": {
+        "message": " (請至該平台分頁以完全載入)"
+    },
+    "cannotRunOnSystemPage": {
+        "message": "無法在系統頁面執行。請開啟對應串流平台網頁。"
+    },
+    "switchFailed": {
+        "message": "切換失敗: $error$",
+        "placeholders": {
+            "error": {
+                "content": "$1"
+            }
+        }
+    },
+    "confirmAutoSaveProfiles": {
+        "message": "偵測到 $count$ 個平臺的資料。是否要自動儲存為新分身？",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "confirmDuplicateImport": {
+        "message": "偵測到 $platform$ 帳號可能已存在（分身名稱：$name$）。仍要匯入為新分身嗎？",
+        "placeholders": {
+            "platform": {
+                "content": "$1"
+            },
+            "name": {
+                "content": "$2"
+            }
+        }
+    },
+    "autoSplitProfilesSuccess": {
+        "message": "已自動拆分為多個分身"
+    },
+    "selectImportPlatform": {
+        "message": "請選擇要匯入的平台"
+    },
+    "importedCookies": {
+        "message": "已匯入 $count$ 個 Cookies",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "storageRestored": {
+        "message": " + Storage 已還原"
+    },
+    "executionError": {
+        "message": "執行出錯: $error$",
+        "placeholders": {
+            "error": {
+                "content": "$1"
+            }
+        }
+    },
+    "optionsTitle": {
+        "message": "帳號分身管理 - Stream Session Pro"
+    },
+    "manageHall": {
+        "message": "分身管理大廳"
+    },
+    "savedProfilesCount": {
+        "message": "已儲存 $count$ 個分身",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "backupAll": {
+        "message": "📥 備份所有分身"
+    },
+    "selectSwitchProfile": {
+        "message": "選擇切換分身..."
+    },
+    "noProfilesEmptyState": {
+        "message": "目前沒有任何分身，快去串流平台頁面儲存一個吧！"
+    },
+    "importProfilesTitle": {
+        "message": "匯入分身資料"
+    },
+    "importDesc": {
+        "message": "將匯出的 JSON 內容貼在下方，系統會自動偵測並存為新分身。"
+    },
+    "importAreaPlaceholder": {
+        "message": "在此貼上 JSON 內容..."
+    },
+    "startImportAndAdd": {
+        "message": "🚀 開始匯入並新增分身"
+    },
+    "editProfileName": {
+        "message": "編輯分身名稱"
+    },
+    "cancel": {
+        "message": "取消"
+    },
+    "saveChanges": {
+        "message": "儲存修改"
+    },
+    "operationSuccess": {
+        "message": "操作成功"
+    },
+    "switchingTo": {
+        "message": "正在切換至: $name$...",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "profileDeleted": {
+        "message": "已刪除分身"
+    },
+    "confirmDelete": {
+        "message": "確定要刪除此分身嗎？此動作無法復原。"
+    },
+    "nameUpdated": {
+        "message": "名稱已更新"
+    },
+    "profileExported": {
+        "message": "已匯出分身檔案"
+    },
+    "noProfilesToBackup": {
+        "message": "目前沒有分身可備份"
+    },
+    "backupComplete": {
+        "message": "備份完成"
+    },
+    "importSuccessCount": {
+        "message": "成功匯入 $count$ 個分身",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "noProfilesImported": {
+        "message": "未匯入任何分身（已跳過重複項）"
+    },
+    "unrecognizedFormat": {
+        "message": "無法辨識的 JSON 格式或不含串流資料"
+    },
+    "importFailedFormatError": {
+        "message": "匯入失敗: 格式錯誤"
+    },
+    "createTime": {
+        "message": "建立時間: $date$",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "cookiesCount": {
+        "message": "Cookies: $count$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    }
+}

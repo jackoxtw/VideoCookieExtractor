@@ -1,0 +1,272 @@
+{
+    "langName": {
+        "message": "English"
+    },
+    "uiLanguage": {
+        "message": "Language"
+    },
+    "autoLanguage": {
+        "message": "Auto (System)"
+    },
+    "extensionName": {
+        "message": "Streaming Session Manager"
+    },
+    "extensionDescription": {
+        "message": "Export/import Cookies and Session for Disney+, Netflix, HBO, Prime Video. Supports multi-account management."
+    },
+    "actionTitle": {
+        "message": "Get Cookies"
+    },
+    "goToPrefix": {
+        "message": "Go to:"
+    },
+    "openManagePage": {
+        "message": "⚙️ Open Management Page"
+    },
+    "initializing": {
+        "message": "Initializing..."
+    },
+    "selectAtLeastOne": {
+        "message": "⚠️ Please select at least one platform"
+    },
+    "detectedCookies": {
+        "message": "✅ Detected $count$ Cookies ($platformCount$ platforms)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "platformCount": {
+                "content": "$2"
+            }
+        }
+    },
+    "noCookiesDetected": {
+        "message": "❌ No cookies detected for selected platforms"
+    },
+    "statusUnknown": {
+        "message": "❓ Status unknown"
+    },
+    "platformAndProfileSwitch": {
+        "message": "Platform & Profile Quick Switch"
+    },
+    "loadingProfiles": {
+        "message": "Loading profiles..."
+    },
+    "selectAll": {
+        "message": "Select All"
+    },
+    "selectNone": {
+        "message": "Clear"
+    },
+    "newProfilePlaceholder": {
+        "message": "New profile name (e.g. Account A)"
+    },
+    "save": {
+        "message": "Save"
+    },
+    "exportOperations": {
+        "message": "Export Operations"
+    },
+    "copyToClipboard": {
+        "message": "📋 Copy Session to Clipboard"
+    },
+    "showContent": {
+        "message": "Show Content"
+    },
+    "exportFile": {
+        "message": "Export File"
+    },
+    "importSession": {
+        "message": "Import Session"
+    },
+    "importPlaceholder": {
+        "message": "Paste JSON content here..."
+    },
+    "startImport": {
+        "message": "📥 Start Import"
+    },
+    "enterProfileName": {
+        "message": "Please enter profile name"
+    },
+    "saveOnPlatformPage": {
+        "message": "Please save profile on the streaming platform page"
+    },
+    "profileSaved": {
+        "message": "Profile saved: $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "profileNotFound": {
+        "message": "Profile data not found"
+    },
+    "unsupportedPlatform": {
+        "message": "Unsupported platform"
+    },
+    "switchedTo": {
+        "message": "Switched to: $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "goToPlatformPageToLoad": {
+        "message": " (Please go to the platform page to fully load)"
+    },
+    "cannotRunOnSystemPage": {
+        "message": "Cannot execute on system pages. Please open the corresponding streaming platform webpage."
+    },
+    "switchFailed": {
+        "message": "Switch failed: $error$",
+        "placeholders": {
+            "error": {
+                "content": "$1"
+            }
+        }
+    },
+    "confirmAutoSaveProfiles": {
+        "message": "Detected data for $count$ platforms. Do you want to automatically save them as new profiles?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "confirmDuplicateImport": {
+        "message": "Detected that $platform$ account may already exist (Profile: $name$). Still want to import as a new profile?",
+        "placeholders": {
+            "platform": {
+                "content": "$1"
+            },
+            "name": {
+                "content": "$2"
+            }
+        }
+    },
+    "autoSplitProfilesSuccess": {
+        "message": "Automatically split into multiple profiles"
+    },
+    "selectImportPlatform": {
+        "message": "Please select platform to import"
+    },
+    "importedCookies": {
+        "message": "Imported $count$ Cookies",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "storageRestored": {
+        "message": " + Storage restored"
+    },
+    "executionError": {
+        "message": "Execution error: $error$",
+        "placeholders": {
+            "error": {
+                "content": "$1"
+            }
+        }
+    },
+    "optionsTitle": {
+        "message": "Profile Management - Stream Session Pro"
+    },
+    "manageHall": {
+        "message": "Profile Management Hall"
+    },
+    "savedProfilesCount": {
+        "message": "Saved $count$ profiles",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "backupAll": {
+        "message": "📥 Backup All Profiles"
+    },
+    "selectSwitchProfile": {
+        "message": "Select profile to switch..."
+    },
+    "noProfilesEmptyState": {
+        "message": "No profiles yet. Go to a streaming platform page to save one!"
+    },
+    "importProfilesTitle": {
+        "message": "Import Profile Data"
+    },
+    "importDesc": {
+        "message": "Paste the exported JSON content below. The system will automatically detect and save it as a new profile."
+    },
+    "importAreaPlaceholder": {
+        "message": "Paste JSON content here..."
+    },
+    "startImportAndAdd": {
+        "message": "🚀 Start Import and Add Profile"
+    },
+    "editProfileName": {
+        "message": "Edit Profile Name"
+    },
+    "cancel": {
+        "message": "Cancel"
+    },
+    "saveChanges": {
+        "message": "Save Changes"
+    },
+    "operationSuccess": {
+        "message": "Operation successful"
+    },
+    "switchingTo": {
+        "message": "Switching to: $name$...",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "profileDeleted": {
+        "message": "Profile deleted"
+    },
+    "confirmDelete": {
+        "message": "Are you sure you want to delete this profile? This action cannot be undone."
+    },
+    "nameUpdated": {
+        "message": "Name updated"
+    },
+    "profileExported": {
+        "message": "Profile file exported"
+    },
+    "noProfilesToBackup": {
+        "message": "No profiles to backup"
+    },
+    "backupComplete": {
+        "message": "Backup complete"
+    },
+    "importSuccessCount": {
+        "message": "Successfully imported $count$ profiles",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "noProfilesImported": {
+        "message": "No profiles imported (duplicates skipped)"
+    },
+    "unrecognizedFormat": {
+        "message": "Unrecognized JSON format or no streaming data found"
+    },
+    "importFailedFormatError": {
+        "message": "Import failed: Format error"
+    },
+    "createTime": {
+        "message": "Created: $date$",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    }
+}

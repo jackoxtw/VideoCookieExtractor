@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_extensionName__",
+    "version": "2.2",
+    "description": "__MSG_extensionDescription__",
+    "default_locale": "zh_TW",
+    "permissions": [
+        "cookies",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://*.disneyplus.com/*",
+        "https://*.disney.com/*",
+        "https://*.bamgrid.com/*",
+        "https://*.netflix.com/*",
+        "https://*.hbomax.com/*",
+        "https://*.max.com/*",
+        "https://*.primevideo.com/*",
+        "https://*.amazon.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "__MSG_actionTitle__"
+    },
+    "options_page": "options.html"
+}

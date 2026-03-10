@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+            --bg-accent: #1e293b;
+            --primary-gradient: linear-gradient(135deg, #00A3FF 0%, #6d28d9 100%);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 350px;
+            height: 600px;
+            background-color: var(--bg-deep);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            overflow: hidden;
+            /* 防止出現卷軸 */
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: var(--text-dim);
+            margin-bottom: 12px;
+        }
+
+        #loginStatus {
+            font-size: 12px;
+            padding: 8px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .card {
+            background: var(--bg-accent);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .platform-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.03);
+            transition: background 0.2s;
+        }
+
+        .platform-label:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        input[type="checkbox"] {
+            accent-color: #00A3FF;
+            width: 15px;
+            height: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 163, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 163, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-mini {
+            padding: 4px 8px;
+            font-size: 11px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+        }
+
+        .btn-mini:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-main);
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            resize: none;
+            margin-bottom: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            border-color: #00A3FF;
+        }
+
+        .platform-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .platform-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .platform-info-side {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .select-wrapper.mini {
+            width: 160px;
+            margin-top: 0;
+        }
+
+        select.p-select {
+            padding: 6px 10px;
+            font-size: 11px;
+        }
+
+        .profile-quick-save {
+            display: flex;
+            gap: 6px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .profile-quick-save input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-main);
+            padding: 8px 10px;
+            font-size: 12px;
+            outline: none;
+        }
+
+        .profile-quick-save input:focus {
+            border-color: #00A3FF;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 16px 0;
+        }
+
+        /* 摺疊樣式 */
+        .collapsible-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .toggle-icon {
+            font-size: 10px;
+            transition: transform 0.3s;
+            color: var(--text-dim);
+        }
+
+        .platform-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+
+        .card.open .platform-container {
+            max-height: 500px;
+            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+            margin-top: 10px;
+        }
+
+        .card.open .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        a {
+            color: #00A3FF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #60c5ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Stream Session Pro</h3>
+    <div class="subtitle">
+        <span data-i18n="goToPrefix">按此前往:</span>
+        <a href="https://www.disneyplus.com" target="_blank">Disney+</a>,
+        <a href="https://www.netflix.com" target="_blank">Netflix</a>,
+        <a href="https://www.max.com" target="_blank">HBO Max</a>,
+        <a href="https://www.primevideo.com" target="_blank">Prime Video</a>
+        <br>
+        <a href="#" id="openOptions" class="manage-link" data-i18n="openManagePage">⚙️ 開啟帳號管理分頁</a>
+    </div>
+
+    <div id="loginStatus" data-i18n="initializing">初始化中...</div>
+
+    <div class="card" id="platformCard">
+        <div class="section-title collapsible-header" id="togglePlatform">
+            <span data-i18n="platformAndProfileSwitch">平台 & 分身快速切換</span>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="platform-container">
+            <div class="platform-list">
+                <!-- Disney+ Row -->
+                <div class="platform-row">
+                    <div class="platform-info-side">
+                        <input type="checkbox" class="platform-check" value="disney" checked>
+                        <span>Disney+</span>
+                    </div>
+                    <div class="select-wrapper mini">
+                        <select class="p-select" data-platform="disney">
+                            <option value="" data-i18n="loadingProfiles">載入分身...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Netflix Row -->
+                <div class="platform-row">
+                    <div class="platform-info-side">
+                        <input type="checkbox" class="platform-check" value="netflix" checked>
+                        <span>Netflix</span>
+                    </div>
+                    <div class="select-wrapper mini">
+                        <select class="p-select" data-platform="netflix">
+                            <option value="" data-i18n="loadingProfiles">載入分身...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- HBO Row -->
+                <div class="platform-row">
+                    <div class="platform-info-side">
+                        <input type="checkbox" class="platform-check" value="hbo" checked>
+                        <span>HBO / Max</span>
+                    </div>
+                    <div class="select-wrapper mini">
+                        <select class="p-select" data-platform="hbo">
+                            <option value="" data-i18n="loadingProfiles">載入分身...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Prime Video Row -->
+                <div class="platform-row">
+                    <div class="platform-info-side">
+                        <input type="checkbox" class="platform-check" value="amazon" checked>
+                        <span>Prime Video</span>
+                    </div>
+                    <div class="select-wrapper mini">
+                        <select class="p-select" data-platform="amazon">
+                            <option value="" data-i18n="loadingProfiles">載入分身...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button id="selectAllBtn" class="btn-mini" data-i18n="selectAll">全選</button>
+                <button id="selectNoneBtn" class="btn-mini" data-i18n="selectNone">清空</button>
+            </div>
+
+            <div class="profile-quick-save">
+                <input type="text" id="profileName" data-i18n-placeholder="newProfilePlaceholder"
+                    placeholder="新分身名稱 (如: 帳號A)">
+                <button id="saveProfileBtn" class="btn-mini" style="background: var(--primary-gradient); color: white;"
+                    data-i18n="save">儲存</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-title" data-i18n="exportOperations">匯出操作</div>
+        <button id="copyBtn" class="btn-primary">
+            <span data-i18n="copyToClipboard">📋 複製 Session 到剪貼簿</span>
+        </button>
+        <div class="btn-group" style="margin-top: 8px;">
+            <button id="showBtn" class="btn-secondary" data-i18n="showContent">顯示內容</button>
+            <button id="exportBtn" class="btn-secondary" style="color: #4ade80;" data-i18n="exportFile">匯出檔案</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-title" data-i18n="importSession">匯入 Session</div>
+        <textarea id="importArea" data-i18n-placeholder="importPlaceholder" placeholder="在此處貼上 JSON 內容..."></textarea>
+        <button id="importBtn" class="btn-primary"
+            style="background: var(--warning); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
+            <span data-i18n="startImport">📥 開始匯入</span>
+        </button>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

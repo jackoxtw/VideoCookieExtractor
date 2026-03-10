@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+*.crx
+*.pem
+/tmp/
+.gemini/
+.agent/
+.agents/
+brain/
+implementation_plan.md
+task.md
+walkthrough.md

@@ -1,0 +1,280 @@
+{
+    "langName": {
+        "message": "日本語"
+    },
+    "uiLanguage": {
+        "message": "表示言語"
+    },
+    "autoLanguage": {
+        "message": "自動 (システム設定)"
+    },
+    "extensionName": {
+        "message": "配信プラットフォーム Session 管理者"
+    },
+    "extensionDescription": {
+        "message": "Disney+, Netflix, HBO, Prime Video の Cookies と Session をエクスポート/インポートします。複数アカウント管理に対応。"
+    },
+    "actionTitle": {
+        "message": "Cookies を取得"
+    },
+    "goToPrefix": {
+        "message": "こちらへ移動："
+    },
+    "openManagePage": {
+        "message": "⚙️ アカウント管理ページを開く"
+    },
+    "initializing": {
+        "message": "初期化中..."
+    },
+    "selectAtLeastOne": {
+        "message": "⚠️ 少なくとも1つのプラットフォームを選択してください"
+    },
+    "detectedCookies": {
+        "message": "✅ $count$ 個の Cookies を検出しました ($platformCount$ プラットフォーム)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "platformCount": {
+                "content": "$2"
+            }
+        }
+    },
+    "noCookiesDetected": {
+        "message": "❌ 選択されたプラットフォームで Cookies が検出されませんでした"
+    },
+    "statusUnknown": {
+        "message": "❓ ステータス不明"
+    },
+    "platformAndProfileSwitch": {
+        "message": "プラットフォーム & プロファイル・クイックスイッチ"
+    },
+    "loadingProfiles": {
+        "message": "プロファイルを読み込み中..."
+    },
+    "selectAll": {
+        "message": "すべて選択"
+    },
+    "selectNone": {
+        "message": "クリア"
+    },
+    "newProfilePlaceholder": {
+        "message": "新しいプロファイル名 (例: アカウントA)"
+    },
+    "save": {
+        "message": "保存"
+    },
+    "exportOperations": {
+        "message": "エクスポート操作"
+    },
+    "copyToClipboard": {
+        "message": "📋 Session をクリップボードにコピー"
+    },
+    "showContent": {
+        "message": "内容を表示"
+    },
+    "exportFile": {
+        "message": "ファイルをエクスポート"
+    },
+    "importSession": {
+        "message": "Session をインポート"
+    },
+    "importPlaceholder": {
+        "message": "ここに JSON 内容を貼り付けてください..."
+    },
+    "startImport": {
+        "message": "📥 インポート開始"
+    },
+    "enterProfileName": {
+        "message": "プロファイル名を入力してください"
+    },
+    "saveOnPlatformPage": {
+        "message": "配信プラットフォームのページでプロファイルを保存してください"
+    },
+    "profileSaved": {
+        "message": "プロファイルを保存しました: $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "profileNotFound": {
+        "message": "プロファイルデータが見つかりません"
+    },
+    "unsupportedPlatform": {
+        "message": "サポートされていないプラットフォームです"
+    },
+    "switchedTo": {
+        "message": "切り替え完了: $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "goToPlatformPageToLoad": {
+        "message": " (完全に読み込むにはプラットフォームのページに移動してください)"
+    },
+    "cannotRunOnSystemPage": {
+        "message": "システムページでは実行できません。対応する配信プラットフォームのウェブページを開いてください。"
+    },
+    "switchFailed": {
+        "message": "切り替えに失敗しました: $error$",
+        "placeholders": {
+            "error": {
+                "content": "$1"
+            }
+        }
+    },
+    "confirmAutoSaveProfiles": {
+        "message": "$count$ 個のプラットフォームのデータを検出しました。新しいプロファイルとして自動保存しますか？",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "confirmDuplicateImport": {
+        "message": "$platform$ アカウントが既に存在する可能性があります（プロファイル名：$name$）。それでも新しいプロファイルとしてインポートしますか？",
+        "placeholders": {
+            "platform": {
+                "content": "$1"
+            },
+            "name": {
+                "content": "$2"
+            }
+        }
+    },
+    "autoSplitProfilesSuccess": {
+        "message": "複数のプロファイルに自動分割されました"
+    },
+    "selectImportPlatform": {
+        "message": "インポートするプラットフォームを選択してください"
+    },
+    "importedCookies": {
+        "message": "$count$ 個の Cookies をインポートしました",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "storageRestored": {
+        "message": " + ストレージが復元されました"
+    },
+    "executionError": {
+        "message": "実行エラー: $error$",
+        "placeholders": {
+            "error": {
+                "content": "$1"
+            }
+        }
+    },
+    "optionsTitle": {
+        "message": "プロファイル管理 - Stream Session Pro"
+    },
+    "manageHall": {
+        "message": "プロファイル管理ホール"
+    },
+    "savedProfilesCount": {
+        "message": "$count$ 個のプロファイルを保存済み",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "backupAll": {
+        "message": "📥 すべてのプロファイルをバックアップ"
+    },
+    "selectSwitchProfile": {
+        "message": "切り替えるプロファイルを選択..."
+    },
+    "noProfilesEmptyState": {
+        "message": "プロファイルがまだありません。配信プラットフォームのページに移動して保存してください！"
+    },
+    "importProfilesTitle": {
+        "message": "プロファイルデータをインポート"
+    },
+    "importDesc": {
+        "message": "エクスポートされた JSON 内容を以下に貼り付けてください。システムが自動的に検出し、新しいプロファイルとして保存します。"
+    },
+    "importAreaPlaceholder": {
+        "message": "ここに JSON 内容を貼り付けてください..."
+    },
+    "startImportAndAdd": {
+        "message": "🚀 インポートを開始してプロファイルを追加"
+    },
+    "editProfileName": {
+        "message": "プロファイル名を編集"
+    },
+    "cancel": {
+        "message": "キャンセル"
+    },
+    "saveChanges": {
+        "message": "変更を保存"
+    },
+    "operationSuccess": {
+        "message": "操作が成功しました"
+    },
+    "switchingTo": {
+        "message": "切り替え中: $name$...",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "profileDeleted": {
+        "message": "プロファイルを削除しました"
+    },
+    "confirmDelete": {
+        "message": "このプロファイルを削除してもよろしいですか？この操作は取り消せません。"
+    },
+    "nameUpdated": {
+        "message": "名前が更新されました"
+    },
+    "profileExported": {
+        "message": "プロファイルファイルをエクスポートしました"
+    },
+    "noProfilesToBackup": {
+        "message": "バックアップするプロファイルがありません"
+    },
+    "backupComplete": {
+        "message": "バックアップが完了しました"
+    },
+    "importSuccessCount": {
+        "message": "$count$ 個のプロファイルを正常にインポートしました",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "noProfilesImported": {
+        "message": "インポートされたプロファイルはありません（重複はスキップされました）"
+    },
+    "unrecognizedFormat": {
+        "message": "認識できない JSON 形式、またはストリーミングデータが含まれていません"
+    },
+    "importFailedFormatError": {
+        "message": "インポート失敗: 形式エラー"
+    },
+    "createTime": {
+        "message": "作成日時: $date$",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "cookiesCount": {
+        "message": "Cookies: $count$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    }
+}

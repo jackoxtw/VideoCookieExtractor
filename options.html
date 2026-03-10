@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title data-i18n="optionsTitle">帳號分身管理 - Stream Session Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+            --bg-accent: #1e293b;
+            --primary-gradient: linear-gradient(135deg, #00A3FF 0%, #6d28d9 100%);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --success: #10b981;
+            --error: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        header {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card {
+            background: var(--bg-accent);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .platform-group {
+            margin-bottom: 30px;
+        }
+
+        .platform-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dim);
+            margin-bottom: 12px;
+            padding-left: 4px;
+            border-left: 4px solid #00A3FF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .profile-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .platform-badge {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            background: var(--primary-gradient);
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .profile-meta {
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-edit {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-edit:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-delete {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--error);
+        }
+
+        .btn-delete:hover {
+            background: rgba(239, 68, 68, 0.2);
+        }
+
+        .btn-export {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+
+        .btn-export:hover {
+            background: rgba(16, 185, 129, 0.2);
+        }
+
+        .quick-switch-bar {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .switch-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .switch-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        select.p-select {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-main);
+            padding: 8px 12px;
+            font-size: 13px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        select.p-select:focus {
+            border-color: #00A3FF;
+        }
+
+        .btn-batch {
+            background: var(--primary-gradient);
+            font-size: 13px;
+        }
+
+        .import-section {
+            margin-top: 30px;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+
+        .import-section h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-main);
+            padding: 16px;
+            font-family: monospace;
+            font-size: 13px;
+            resize: none;
+            margin-bottom: 16px;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #00A3FF;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-dim);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .modal-content {
+            background: var(--bg-accent);
+            padding: 24px;
+            border-radius: 16px;
+            width: 400px;
+            border: 1px solid var(--border);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: white;
+            padding: 12px;
+            margin: 16px 0;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #00A3FF;
+        }
+
+        #statusToast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: var(--success);
+            color: white;
+            transform: translateY(100px);
+            transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+
+        #statusToast.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 data-i18n="manageHall">分身管理大廳</h1>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div id="stats" style="color: var(--text-dim); font-size: 14px;" data-i18n="savedProfilesCount">已儲存 0
+                    個分身</div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="color: var(--text-dim); font-size: 14px;" data-i18n="uiLanguage">介面語言</span>
+                    <select id="langSelect" class="p-select" style="width: 140px; margin: 0;">
+                        <option value="auto" data-i18n="autoLanguage">Auto</option>
+                        <option value="zh_TW">繁體中文</option>
+                        <option value="zh_CN">简体中文</option>
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
+                <button id="exportAllBtn" class="btn-batch" data-i18n="backupAll">📥 備份所有分身</button>
+            </div>
+        </header>
+
+        <div class="quick-switch-bar">
+            <!-- Disney+ -->
+            <div class="switch-item">
+                <div class="switch-label">Disney+</div>
+                <select class="p-select" data-platform="disney">
+                    <option value="" data-i18n="selectSwitchProfile">選擇切換分身...</option>
+                </select>
+            </div>
+            <!-- Netflix -->
+            <div class="switch-item">
+                <div class="switch-label">Netflix</div>
+                <select class="p-select" data-platform="netflix">
+                    <option value="" data-i18n="selectSwitchProfile">選擇切換分身...</option>
+                </select>
+            </div>
+            <!-- HBO -->
+            <div class="switch-item">
+                <div class="switch-label">HBO / Max</div>
+                <select class="p-select" data-platform="hbo">
+                    <option value="" data-i18n="selectSwitchProfile">選擇切換分身...</option>
+                </select>
+            </div>
+            <!-- Prime Video -->
+            <div class="switch-item">
+                <div class="switch-label">Prime Video</div>
+                <select class="p-select" data-platform="amazon">
+                    <option value="" data-i18n="selectSwitchProfile">選擇切換分身...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div id="profileList" class="profile-list">
+                <!-- 由 JS 動態生成 -->
+            </div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p style="font-size: 40px; margin-bottom: 10px;">👻</p>
+                <p data-i18n="noProfilesEmptyState">目前沒有任何分身，快去串流平台頁面儲存一個吧！</p>
+            </div>
+
+            <div class="import-section">
+                <h2 data-i18n="importProfilesTitle">匯入分身資料</h2>
+                <p style="font-size: 13px; color: var(--text-dim); margin-bottom: 12px;" data-i18n="importDesc">將匯出的
+                    JSON 內容貼在下方，系統會自動偵測並存為新分身。
+                </p>
+                <textarea id="importArea" data-i18n-placeholder="importAreaPlaceholder"
+                    placeholder="在此貼上 JSON 內容..."></textarea>
+                <button id="importBtn" class="btn-batch" style="width: 100%; height: 48px; font-size: 15px;"
+                    data-i18n="startImportAndAdd">🚀
+                    開始匯入並新增分身</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3 data-i18n="editProfileName">編輯分身名稱</h3>
+            <input type="text" id="editNameInput">
+            <div class="actions" style="justify-content: flex-end;">
+                <button onclick="closeModal()" style="background: transparent;" data-i18n="cancel">取消</button>
+                <button id="saveEditBtn" style="background: var(--primary-gradient);"
+                    data-i18n="saveChanges">儲存修改</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="statusToast" data-i18n="operationSuccess">操作成功</div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
